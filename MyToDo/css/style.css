@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 }
 li {
     list-style: none;
@@ -13,6 +14,7 @@ li {
 .app {
     display: flex;
     flex-direction: column;
+    background-color: white;
     max-width: 500px;
     margin: 0 auto;
     align-items: center;
@@ -24,7 +26,7 @@ li {
 header {
     width: 100%;
     padding: 15px 0px;
-    background-color: yellow;
+    background: lightgoldenrodyellow;
     border-radius: 10px;
     text-align: center;
 }

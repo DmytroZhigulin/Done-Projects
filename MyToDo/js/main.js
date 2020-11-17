@@ -45,6 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         new newTodoItem().render();
+        formInput.value = '';
     }
 
 });
