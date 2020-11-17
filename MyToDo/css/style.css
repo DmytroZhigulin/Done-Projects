@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+li {
+    list-style: none;
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 50px;
+    border: 1px gray solid;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+header {
+    width: 100%;
+    padding: 15px 0px;
+    background-color: yellow;
+    border-radius: 10px;
+    text-align: center;
+}
+.title {
+    margin-right: 100px;
+}
+.todo-list {
+    width: 90%;
+}
+.todo-item {
+    padding: 20px 5px;
+    border-bottom: 1px lightgray solid;
+}
+.checkbox:checked ~ button {
+    display: inline-block;
+}
+.todo-item button {
+    display: none;
+}
+.todo-item:hover button {
+    display: inline-block;
+}
+.text {
+    display: none;
+}
+.todo-form {
+    width: 100%;
+}
+.add-task {
+    height: 30px;
+    width: 65%;
+    margin: 10px 35px 10px 25px;
+    padding-left: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+button {
+    background-color: wheat;
+    border: none;
+    cursor: pointer;
+    width: 75px;
+}
