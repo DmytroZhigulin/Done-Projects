@@ -5,7 +5,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.todo-form'),
           formInput = form.querySelector('.add-task'), 
           todoList = document.querySelector('.todo-list'),
-          todoItem = todoList.querySelectorAll('.todo-item');
+          todoItem = todoList.querySelectorAll('.todo-item'),
+          delBtn = todoItem.querySelectorAll('button');
 
     
     form.addEventListener('submit', addTodoItem); // Вешаем обработчик события на форму
