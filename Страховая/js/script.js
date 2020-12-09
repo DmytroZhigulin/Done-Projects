@@ -65,8 +65,8 @@ $('[data-modal]').click(function () {
 
 // Slick Slide Reviews
 $('.reviews_slider').slick({
-    prevArrow: '<button type="button" class="slick-prev"><img src="../img/arrow-left.png" alt="arrow-prev"></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="../img/arrow-right.png" alt="arrow-next"></button>',
+    prevArrow: '<button type="button" class="slick-prev"><img src="img/arrow-left.png" alt="arrow-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="img/arrow-right.png" alt="arrow-next"></button>',
     dots: true,
     mobileFirst: true,
     autoplay: true,
