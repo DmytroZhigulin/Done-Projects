@@ -6,6 +6,9 @@ window.addEventListener('DOMContentLoaded', () => {
           formInput = form.querySelector('.add-task'), 
           todoList = document.querySelector('.todo-list'),
           todoItem = document.querySelectorAll('.todo-item');
+          
+
+          
 
     form.addEventListener('submit', addTodoItem); // Вешаем обработчик события на форму
 
@@ -20,18 +23,16 @@ window.addEventListener('DOMContentLoaded', () => {
         render() {
 
             const item = document.createElement('li');
+            item.classList.add('todo-item');
 
             item.innerHTML = `
-                <li class="todo-item">
                     <input type="checkbox" class="checkbox">
                     <label for="" class="title"> ${this.title}</label>
                     <input type="text" class="text">
                     <button class="add">Edit</button>
-                    <button class="delete">Delete</button>
-                </li>
-            `;
+                    <button class="delete">Delete</button>   
+                `;
             this.parent.append(item);
-
         }
     }
 
@@ -44,7 +45,17 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         new newTodoItem().render();
+        
         formInput.value = '';
     }
+
+    //функция отслеживания событий внутри ITEM
+    function itemEvents(todoItem) {
+        
+        const checkbox = document.querySelectorAll('.checkbox');
+        console.log(checkbox);
+
+    }
+    
 
 });
