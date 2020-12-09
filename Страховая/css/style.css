@@ -15,7 +15,7 @@
 }
 
 .btn {
-  width: 170px;
+  min-width: 170px;
   height: 48px;
   cursor: pointer;
   background: -webkit-gradient(linear, left top, left bottom, from(#F8BD7A), to(#AB6E36));
@@ -38,6 +38,7 @@
   position: absolute;
   display: block;
   left: calc(48% - 142px/2);
+  outline: none;
 }
 
 .btn.modalBtn {
@@ -125,6 +126,7 @@
 
 .header__inner .menu__button {
   border: none;
+  outline: none;
   width: 38px;
   height: 4px;
   background: #5FB5BF;
@@ -453,7 +455,7 @@
 }
 
 .program_description li::before {
-  content: url(../img/listCheck.svg);
+  content: url(../img/svg/listCheck.svg);
   height: 25px;
   width: 100%;
   position: absolute;
@@ -666,6 +668,10 @@
   cursor: pointer;
 }
 
+.reviews .slick-list {
+  outline: none;
+}
+
 .reviews .slick-prev {
   bottom: 0px;
   left: 10%;
@@ -831,6 +837,7 @@
 .contacts_field .mails a {
   color: #5fb5bf;
   border-bottom: 2px solid #5fb5bf;
+  text-decoration: none;
 }
 
 .contacts_field .mails a:hover {
@@ -870,6 +877,9 @@
 .contacts_field .social a :hover {
   fill: #333333;
   stroke: #333333;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .contacts_form {
@@ -969,6 +979,7 @@ section {
 body {
   min-width: 320px;
   overflow-x: hidden;
+  font-family: "Ubuntu-Regular";
 }
 
 .container {
@@ -1159,7 +1170,7 @@ body {
 @media (min-width: 1820px) {
   .program_pic {
     top: -20%;
-    right: -3%;
+    right: -7%;
     display: block;
     max-width: 926px;
   }
