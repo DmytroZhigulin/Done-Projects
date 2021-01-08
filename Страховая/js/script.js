@@ -89,23 +89,81 @@ $('[data-modal]').click(function () {
 
 //проверка форм 
 
-$('.modal_form').submit( function() {
+// $('.modal_form').submit( function() {
 
-    $('#modal_name').val( function() {
-        console.log(this.value);
-    });
-    $('#modal_phone').val( function() {
-        console.log(this.value);
-    });
+//     $('#modal_name').val( function() {
+//         console.log(this.value);
+//     });
+//     $('#modal_phone').val( function() {
+//         console.log(this.value);
+//     });
 
-    console.log("Submited"); 
-    return false;  
+//     console.log("Submited"); 
+//     return false;  
+// });
+
+// $('.contacts_form').submit( function() {
+//     console.log("Submited"); 
+//     return false;  
+// });
+
+
+// Отправка форм
+
+const forms = document.querySelectorAll('form');
+console.log(forms);
+
+const message = {
+    loading: "Завантаження",
+    success: "Добре! Ми зв'яжемося з вами найближчим часом",
+    failure: "Щось зламалося =("
+};
+
+forms.forEach( item => {
+    postData(item);
 });
 
-$('.contacts_form').submit( function() {
-    console.log("Submited"); 
-    return false;  
-});
+function postData (form) {
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const statusMessage = document.createElement('div');
+        statusMessage.classList.add('status');
+        statusMessage.textContent = message.loading;
+        form.append(statusMessage);
+
+
+        const request = new XMLHttpRequest();
+        request.open('POST', 'server.php');
+
+        // request.setRequestHeader('Content-type', 'application/json'); Раскоментировать при работе с JSON эту строку и код ниже.
+        const formData = new FormData(form);
+
+        // const obj = {};
+        // formData.forEach(function(value, key) {
+        //     obj[key] = value;
+        // });
+        // const json = JSON.stringify(obj);
+
+        request.send(formData);
+
+
+        request.addEventListener('load', () => {
+            if (request.status === 200) {
+                console.log(request.response);
+                statusMessage.textContent = message.success;
+                form.reset();
+                setTimeout(() => {
+                    statusMessage.remove();
+                }, 2000);
+            } else {
+                statusMessage.textContent = message.failure;
+            }
+        });
+
+    });
+}
 
 
 
