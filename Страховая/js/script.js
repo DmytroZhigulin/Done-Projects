@@ -19,6 +19,23 @@ testWebP(function (support) {
 });
 
 
+// Slick Slide Reviews
+$('.slider').slick({
+    prevArrow: '<button type="button" class="slick-prev"><img src="img/arrow-left.png" alt="arrow-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="img/arrow-right.png" alt="arrow-next"></button>',
+    dots: true,
+    mobileFirst: true,
+    autoplay: true,
+    infinite: true,
+    speed: 800,
+    fade: true,
+    cssEase: 'linear',
+    adaptiveHeight: true,   
+    centerMode: true,
+    
+});
+
+
 //Прокрутка по якорям
 $('a.nav-link').click(function() {
     $('html, body').animate({
@@ -45,40 +62,58 @@ $('.menu__button').click(function () {
 $('[data-modal]').click(function () {
     $('.modal').removeClass('hidden').addClass('show');
 
-    function closeByEsc() {
+    function closeModal() {
         $('.modal').removeClass('show').addClass('hidden');
     }
 
     //закрытие модального окна по клику на крестик
     $('[data-close]').click(function() {
-        closeByEsc();   
+        closeModal();   
     });
 
     //закрытие модального окна по клику на ESC
     $(window).bind('keydown', function(e) {
         if(e.keyCode === 27) {
-            closeByEsc();
+            closeModal();
+        }
+    });
+
+    //Закрытие модалки по клику вне области окна
+    $('.modal').click(function(event) {
+        if(event.target === this) {
+            closeModal();
         }
     });
 });
 
 
+//проверка форм 
 
+$('.modal_form').submit( function() {
 
+    $('#modal_name').val( function() {
+        console.log(this.value);
+    });
+    $('#modal_phone').val( function() {
+        console.log(this.value);
+    });
 
-
-// Slick Slide Reviews
-$('.reviews_slider').slick({
-    prevArrow: '<button type="button" class="slick-prev"><img src="img/arrow-left.png" alt="arrow-prev"></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="img/arrow-right.png" alt="arrow-next"></button>',
-    dots: true,
-    mobileFirst: true,
-    autoplay: true,
-    infinite: true,
-    speed: 800,
-    fade: true,
-    cssEase: 'linear',
-    
+    console.log("Submited"); 
+    return false;  
 });
+
+$('.contacts_form').submit( function() {
+    console.log("Submited"); 
+    return false;  
+});
+
+
+
+
+
+
+
+
+
 
 
