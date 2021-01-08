@@ -137,16 +137,16 @@ function postData (form) {
         const request = new XMLHttpRequest();
         request.open('POST', 'server.php');
 
-        request.setRequestHeader('Content-type', 'application/json'); //Раскоментировать при работе с JSON эту строку и код ниже.
+        // request.setRequestHeader('Content-type', 'application/json'); //Раскоментировать при работе с JSON эту строку и код ниже.
         const formData = new FormData(form);
 
-        const obj = {};
-        formData.forEach(function(value, key) {
-            obj[key] = value;
-        });
-        const json = JSON.stringify(obj);
+        // const obj = {};
+        // formData.forEach(function(value, key) {
+        //     obj[key] = value;
+        // });
+        // const json = JSON.stringify(obj);
 
-        request.send(json);//заменить на json
+        request.send(formData);//заменить на json
 
 
         request.addEventListener('load', () => {
