@@ -193,10 +193,12 @@
   color: #595959;
 }
 
-.head {
-  background-image: url(../img/BANER.jpg); }
+.webp .head {
+  background-image: url(../img/BANER.webp); 
+}
 
 .head {
+  background-image: url(../img/BANER.jpg); 
   background-position-x: center;
   background-position-y: top;
   background-repeat: no-repeat;
