@@ -106,6 +106,7 @@
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s;
+  outline: none;
 }
 
 .header__inner .nav-link:hover {
@@ -193,12 +194,8 @@
   color: #595959;
 }
 
-.webp .head {
-  background-image: url(../img/BANER.webp); 
-}
-
 .head {
-  background-image: url(../img/BANER.jpg); 
+  background-image: url(../img/Baner.jpg);
   background-position-x: center;
   background-position-y: top;
   background-repeat: no-repeat;
@@ -637,10 +634,8 @@
   position: relative;
 }
 
-.no-webp .reviews_pic {
-  background-image: url(../img/like.png); }
-
 .reviews_pic {
+  background-image: url(../img/like.png);
   position: absolute;
   background-repeat: no-repeat;
   max-width: 580px;
@@ -688,6 +683,7 @@
 .reviews .slick-dots button {
   list-style: none;
   border: none;
+  outline: none;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -705,6 +701,7 @@
   position: absolute;
   background-color: transparent;
   border: none;
+  outline: none;
   cursor: pointer;
 }
 
@@ -734,6 +731,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 38px 0px 33px;
+  outline: none;
 }
 
 .reviews .review.hidden {
@@ -968,11 +966,9 @@
   margin-left: 15px;
 }
 
-.no-webp .footer_logo {
-  background-image: url(../img/logo.png); }
-
 .footer_logo {
   display: block;
+  background-image: url(../img/logo.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1012,6 +1008,10 @@ html {
   padding: 0;
 }
 
+a {
+  outline: none;
+}
+
 section {
   padding: 70px 0;
 }
@@ -1033,6 +1033,12 @@ body {
 
 .hidden {
   display: none;
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
 }
 
 .text_sectionTitle {
@@ -1239,9 +1245,3 @@ body {
     display: none;
   }
 }
-
-.webp .head { background-image: url(../img/BANER.webp); }
-
-.webp .reviews_pic { background-image: url(../img/like.webp); }
-
-.webp .footer_logo { background-image: url(../img/logo.webp); }

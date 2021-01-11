@@ -1,22 +1,22 @@
 "use strict";
 
-function testWebP(callback) {
+// function testWebP(callback) {
 
-    var webP = new Image();
-    webP.onload = webP.onerror = function () {
-        callback(webP.height == 2);
-    };
-    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
+//     var webP = new Image();
+//     webP.onload = webP.onerror = function () {
+//         callback(webP.height == 2);
+//     };
+//     webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+// }
     
-testWebP(function (support) {
+// testWebP(function (support) {
     
-    if (support == true) {
-        document.querySelector('body').classList.add('webp');
-    } else {
-        document.querySelector('body').classList.add('no-webp');
-    }
-});
+//     if (support == true) {
+//         document.querySelector('body').classList.add('webp');
+//     } else {
+//         document.querySelector('body').classList.add('no-webp');
+//     }
+// });
 
 
 // Slick Slide Reviews
@@ -87,27 +87,6 @@ $('[data-modal]').click(function () {
 });
 
 
-//проверка форм 
-
-// $('.modal_form').submit( function() {
-
-//     $('#modal_name').val( function() {
-//         console.log(this.value);
-//     });
-//     $('#modal_phone').val( function() {
-//         console.log(this.value);
-//     });
-
-//     console.log("Submited"); 
-//     return false;  
-// });
-
-// $('.contacts_form').submit( function() {
-//     console.log("Submited"); 
-//     return false;  
-// });
-
-
 // Отправка форм
 
 const forms = document.querySelectorAll('form');
@@ -137,8 +116,7 @@ function postData (form) {
         const request = new XMLHttpRequest();
         request.open('POST', 'server.php');
 
-        // request.setRequestHeader('Content-type', 'application/json'); 
-        //Раскоментировать при работе с JSON эту строку и код ниже.
+        // request.setRequestHeader('Content-type', 'application/json'); //Раскоментировать при работе с JSON эту строку и код ниже.
         const formData = new FormData(form);
 
         // const obj = {};
