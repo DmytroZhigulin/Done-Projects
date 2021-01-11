@@ -135,13 +135,13 @@
   -webkit-transition: .7s;
   -o-transition: .7s;
   transition: .7s;
+  position: absolute;
 }
 
 .header__inner .menu__button::after,
 .header__inner .menu__button::before {
   content: "";
   height: 4px;
-  width: 100%;
   background: #5FB5BF;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
@@ -196,7 +196,7 @@
 }
 
 .head {
-  background-image: url(../img/BANER.jpg);
+  background-image: url(../img/Baner.jpg);
   background-position-x: center;
   background-position-y: top;
   background-repeat: no-repeat;

@@ -49,8 +49,8 @@ $('a.nav-link').click(function() {
 
 
 // ловим клик на бургер меню
-$('.menu__button').click(function () {
-    $(this).toggleClass('active');
+$('.menu').click(function () {
+    $('.menu__button').toggleClass('active');
 
     if(true) {
         $('.nav__mobile').toggleClass('hidden'); 
