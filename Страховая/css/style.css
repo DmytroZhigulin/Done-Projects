@@ -141,6 +141,7 @@
 .header__inner .menu__button::before {
   content: "";
   height: 4px;
+  width: 100%;
   background: #5FB5BF;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
