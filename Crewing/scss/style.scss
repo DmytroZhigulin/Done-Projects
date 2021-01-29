@@ -1,3 +1,16 @@
+@font-face {
+    font-family: Poppins-Bold; /* Гарнитура шрифта */
+    src: url(../fonts/Poppins-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: Poppins-Regular; /* Гарнитура шрифта */
+    src: url(../fonts/Poppins-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: Poppins-SemiBoldItalic; /* Гарнитура шрифта */
+    src: url(../fonts/Poppins-SemiBoldItalic.ttf); /* Путь к файлу со шрифтом */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +22,17 @@
     display: block;
 }
 .hidden {
-    display: none;
-    
+    display: none;   
+}
+.container-fluid {
+    padding: 0;
 }
 
+.carousel-control-next-icon, 
+.carousel-control-prev-icon {
+    width: 30px;
+    height: 30px;
+}
 header {
     position: absolute;
     top: 0;
@@ -29,8 +49,35 @@ header {
         position: relative;
         background-color: black;
     }
+
+    .navbar-collapse {
+        flex-grow: 0;
+    }
+    
+    .navbar-dark {
+    
+        .logo img{
+            max-height: 130px;
+        }
+    
+        .navbar-nav .nav-link{
+            font-size: 20px;
+            color: var(--white);
+            transition: 0.5s;
+            outline: none;
+            font-family: Poppins-Regular;
+        
+            &:hover,
+            &:active,
+            &:focus {
+                color: var(--info);
+            }
+        }  
+    }
 }
 .carousel {
+
+    background-color: black;
 
     &__shadow {
         position: absolute;
@@ -41,7 +88,6 @@ header {
         background-color: black;
         opacity: 50%;
     }
-
 
     .carousel-caption {
         position: absolute;
@@ -55,59 +101,130 @@ header {
 
         p {
             text-transform: uppercase;
-            font-size: 50px;
+            font-size: 40px;
             max-width: 35rem;
             font-weight: bold;
+            font-family: Poppins-SemiBoldItalic;
         }
     }
-}
 
-.navbar-collapse {
-    flex-grow: 0;
-}
+    .supply__block {
 
-.navbar-dark {
-
-    .logo img{
-        max-height: 130px;
-    }
-
-    .navbar-nav .nav-link{
-        font-size: 20px;
+        padding-bottom: 2rem;
         color: var(--white);
-        transition: 0.5s;
-        outline: none;
-    
-        &:hover,
-        &:active,
-        &:focus {
-            color: var(--info);
+        font-family: Poppins-SemiBoldItalic;
+        line-height: 30px;
+        align-items: center;
+
+        @media (max-width: 991px) {
+            line-height: 20px;
         }
+
+        div {
+            padding-top: 2rem;
+        }
+
+        h2 {
+            margin: 0 auto;
+            padding-top: 2rem;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .list-group {
+
+            &-item {
+            background-color: transparent;
+            border-bottom: 1px solid white;
+            }        
+        }
+    }
 }
 
-
-    
-}
-
+//Done
 .about {
-    display: none;
+    
     background-color: black;
+    // color: var(--white);
+    color: #008fc7;
+    background-image: url(../img/backservices.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 
     &__block {
 
-        &-title {
-            color: var(--white);
-            text-align: center;
-            font-size: 5rem;
-            padding-top: 30px;
+        padding-top: 11rem;
+
+        @media (max-width: 991px) {
+            padding-top: 1rem;
         }
 
-        &-content img {
-            width: 100%;
+        &-title {
+            font-family: Poppins-Bold;
+            text-align: center;
+            font-size: 4rem;
+
+            @media (max-width: 991px) {
+                font-size: 2rem;
+            }
         }
+        img {
+            width: 90%;
+        }
+        p {
+            font-size: 2rem;
+            padding-top: 1rem;
+            font-family: Poppins-Bold;
+
+            @media (max-width: 991px) {
+                font-size: 1rem;
+            }
+        }
+        &-content {
+            padding-top: 3rem;
+
+            @media (max-width: 991px) {
+                padding-top: 1rem;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            p {
+                font-family: Poppins-SemiBoldItalic;
+                font-size: 1rem;
+            }
+
+            .row div {
+                padding-top: 2rem;
+
+                @media (max-width: 991px) {
+                    padding-top: 1rem;
+                }
+            }
+
+            .four__block {
+                padding-bottom: 2rem;
+            }
+        }
+
     }
 }
 
+
+.careers {
+    padding-top: 11rem;
+    height: 100vh;
+    font-family: Poppins-Bold;
+
+    @media (max-width: 991px) {
+        padding-top: 6rem;
+    }
+}
 
 
 .contacts {
@@ -125,13 +242,20 @@ header {
     }
 }
 
-
+//Done
 footer {
     background-color: black;
     padding-top: 15px;
 
+    .row {
+        align-items: center;
+    }
+
     p {
         color: var(--white);
+        font-family: Poppins-Regular;
+        font-size: 11px;
+        margin: 0;
     }
 
     img{
